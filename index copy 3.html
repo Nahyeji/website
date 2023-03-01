@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cash Flow Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <canvas id="cash-flow-bar-chart"></canvas>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td><input type="number" id="initial-investment" oninput="calculateCashFlow()"></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input type="number" id="cash-flow-1" oninput="calculateCashFlow()"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input type="number" id="cash-flow-2" oninput="calculateCashFlow()"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="number" id="cash-flow-3" oninput="calculateCashFlow()"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input type="number" id="cash-flow-4" oninput="calculateCashFlow()"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><input type="number" id="cash-flow-5" oninput="calculateCashFlow()"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Discount rate: <input type="number" id="discount-rate" value="10" oninput="calculateCashFlow()">%</p>
+    <p>NPV: $<span id="npv">0.00</span></p>
+
+    <script>
+      const calculateCashFlow = () => {
+        // Get the input values
+        const initialInvestment = parseFloat(document.getElementById('initial-investment').value);
+        const cashFlow1 = parseFloat(document.getElementById('cash-flow-1').value);
+        const cashFlow2 = parseFloat(document.getElementById('cash-flow-2').value);
+        const cashFlow3 = parseFloat(document.getElementById('cash-flow-3').value);
+        const cashFlow4 = parseFloat(document.getElementById('cash-flow-4').value);
+        const cashFlow5 = parseFloat(document.getElementById('cash-flow-5').value);
+        const discountRate = parseFloat(document.getElementById('discount-rate').value) / 100;
+
+        // Calculate the discounted cash flows
+        const discountedCashFlow1 = cashFlow1 / Math.pow(1 + discountRate, 1);
+        const discountedCashFlow2 = cashFlow2 / Math.pow(1 + discountRate, 2);
+        const discountedCashFlow3 = cashFlow3 / Math.pow(1 + discountRate, 3);
+        const discountedCashFlow4 = cashFlow4 / Math.pow(1 + discountRate, 4);
+        const discountedCashFlow5 = cashFlow5 / Math.pow(1 + discountRate, 5);
+
+        // Calculate the net present value
+        const npv = initialInvestment + discountedCashFlow1 + discountedCashFlow2 + discountedCashFlow3 + discountedCashFlow4 + discountedCashFlow5;
+
+          // Update the NPV display
+          document.getElementById('npv').textContent = npv.toFixed(2);
+
+// Update the chart data
+const cashFlowChart = Chart.getChart('cash-flow-bar-chart');
+cashFlowChart.data.datasets[0].data = [initialInvestment, cashFlow1, cashFlow2, cashFlow3, cashFlow4, cashFlow5];
+cashFlowChart.update();
+};
+
+   // Define the chart data
+   const data = {
+        labels: ['Initial Investment', 'Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+        datasets: [
+          {
+            label: 'Cash Flow',
+            data: [-10000, 5000, 6000, 7000, 8000, 9000],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)', // Red for negative values
+              'rgba(54, 162, 235, 0.2)', // Blue for positive values
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(54, 162, 235, 1)',
+            ],
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      // Define the chart options
+      const options = {
+        scales: {
+          x: {
+            stacked: true,
+          },
+          y: {
+            stacked: true,
+            ticks: {
+              callback: function (value, index, values) {
+                return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+              },
+            },
+          },
+        },
+      };
+
+      // Create the chart
+      const cashFlowChart = new Chart(document.getElementById('cash-flow-bar-chart'), {
+        type: 'bar',
+        data: data,
+        options: options,
+      });
+    </script>
+  </body>
+</html>
