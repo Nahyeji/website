@@ -21,7 +21,7 @@ html {
 }
 
 .intro {
-  background-image: url('https://github.com/Nahyeji/website/blob/main/images/Free%20photo%20solar%20power.jpg?raw=true');
+  background-image: url('https://raw.githubusercontent.com/Nahyeji/website/main/images/Free%20photo%20solar%20power.jpg');
   background-size: cover;
   background-position: center;
   height: 500px; /* increase the height of the intro section */
@@ -45,7 +45,7 @@ html {
   align-items: center;
 }
 .intro {
-  background-image: url('https://github.com/Nahyeji/website/blob/main/images/Free%20photo%20solar%20power.jpg?raw=true');
+  background-image: url('https://raw.githubusercontent.com/Nahyeji/website/main/images/Free%20photo%20solar%20power.jpg');
   background-size: cover;
   background-position: center;
   height: 500px;
