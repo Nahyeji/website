@@ -1,3 +1,7 @@
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 // Define variables for DOM elements
 const cityElement = document.getElementById('city');
 const startDateElement = document.getElementById('start-date');
@@ -9,6 +13,8 @@ const efficiencyElement = document.getElementById('efficiency');
 const insolationElement = document.getElementById('insolation');
 const performanceRatioElement = document.getElementById('performance-ratio');
 const powerOutputElement = document.getElementById('power-output');
+const capacityElement = document.getElementById('capacity');
+const slopeIrradiationRatioElement = document.getElementById('slope-irradiation-ratio');
 
 // Add event listeners to elements
 calculateButton.addEventListener('click', calculateSum);
@@ -26,8 +32,14 @@ function changeCity(city) {
   citySelect.value = city;
 }
 
+
 // Get the image element
 const image = document.getElementById("myImage");
+
+
+
+
+
 
 // Add a click event listener to the image element
 image.addEventListener("click", function(event) {
@@ -157,7 +169,7 @@ image.addEventListener("click", function(event) {
   }
 
  // Check if the click event is in the second region
-else if (x >= 151 && x <= 176 && y >= 317 && y <= 334) {
+  else if (x >= 151 && x <= 176 && y >= 317 && y <= 334) {
   // Change the image source to map7.png
   image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map7.png";
 
@@ -177,7 +189,7 @@ else if (x >= 151 && x <= 176 && y >= 317 && y <= 334) {
 }
 
  // Check if the click event is in the second region
-else if (x >= 281 && x <= 302 && y >= 247 && y <= 278) {
+  else if (x >= 281 && x <= 302 && y >= 247 && y <= 278) {
   // Change the image source to map8.png
   image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map8.png";
 
@@ -197,7 +209,7 @@ else if (x >= 281 && x <= 302 && y >= 247 && y <= 278) {
 }
 
  // Check if the click event is in the second region
-else if (x >= 195 && x <= 205 && y >= 215 && y <= 225) {
+  else if (x >= 195 && x <= 205 && y >= 215 && y <= 225) {
   // Change the image source to map9.png
   image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map9.png";
 
@@ -217,7 +229,7 @@ else if (x >= 195 && x <= 205 && y >= 215 && y <= 225) {
 }
 
  // Check if the click event is in the second region
-else if (x >= 316 && x <= 348 && y >= 305 && y <= 333) {
+  else if (x >= 316 && x <= 348 && y >= 305 && y <= 333) {
   // Change the image source to map10.png
   image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map10.png";
 
@@ -237,7 +249,7 @@ else if (x >= 316 && x <= 348 && y >= 305 && y <= 333) {
 }
 
  // Check if the click event is in the second region
-else if (x >= 166 && x <= 187 && y >= 90 && y <= 113) {
+  else if (x >= 166 && x <= 187 && y >= 90 && y <= 113) {
   // Change the image source to map11.png
   image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map11.png";
 
@@ -257,7 +269,7 @@ else if (x >= 166 && x <= 187 && y >= 90 && y <= 113) {
 }
 
  // Check if the click event is in the second region
-else if (x >= 330 && x <= 358 && y >= 273 && y <= 301) {
+  else if (x >= 330 && x <= 358 && y >= 273 && y <= 301) {
   // Change the image source to map12.png
   image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map12.png";
 
@@ -276,7 +288,7 @@ else if (x >= 330 && x <= 358 && y >= 273 && y <= 301) {
   });
 }
  // Check if the click event is in the second region
-else if (x >= 131 && x <= 156 && y >= 88 && y <= 115) {
+  else if (x >= 131 && x <= 156 && y >= 88 && y <= 115) {
   // Change the image source to map13.png
   image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map13.png";
 
@@ -295,7 +307,7 @@ else if (x >= 131 && x <= 156 && y >= 88 && y <= 115) {
   });
 }
  // Check if the click event is in the second region
-else if (x >= 106 && x <= 175 && y >= 467 && y <= 513) {
+  else if (x >= 106 && x <= 175 && y >= 467 && y <= 513) {
   // Change the image source to map14.png
   image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map14.png";
 
@@ -306,7 +318,7 @@ else if (x >= 106 && x <= 175 && y >= 467 && y <= 513) {
   regionList.innerHTML = "";
 
   // Create a new list of regions based on the new map image
-  const regions = ["Jeju-si","Seogwipo-si"];
+  const regions = ["제주시","서귀포시"];
   regions.forEach(function(region) {
     const li = document.createElement("li");
     li.textContent = region;
@@ -314,7 +326,7 @@ else if (x >= 106 && x <= 175 && y >= 467 && y <= 513) {
   });
 }
  // Check if the click event is in the second region
-else if (x >= 122 && x <= 189 && y >= 155 && y <= 233) {
+  else if (x >= 122 && x <= 189 && y >= 155 && y <= 233) {
   // Change the image source to map15.png
   image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map15.png";
 
@@ -368,6 +380,9 @@ document.querySelectorAll('.region-list li').forEach((region) => {
     event.target.classList.add('selected');
   });
 });
+
+
+
 
 
 function calculateSum() {
@@ -424,15 +439,53 @@ regionList.addEventListener("click", function(event) {
   clickedRegion.classList.add("selected");
 });
 
-function calculatePower() { 
-  const area = areaElement.value;
+
+const calculateDateButton = document.getElementById("calculate-date");
+calculateDateButton.addEventListener("click", () => {
+  const startDateInput = document.getElementById("start-date");
+  const endDateInput = document.getElementById("end-date");
+  const numYearsInput = document.getElementById("num-years");
+
+  const startDate = new Date(startDateInput.value);
+  const numYears = parseInt(numYearsInput.value);
+
+  if (isNaN(numYears) || numYears < 1) {
+    alert("Please enter a valid number of years.");
+    return;
+  }
+
+  const endDate = new Date(startDate);
+  endDate.setFullYear(startDate.getFullYear() + numYears);
+  endDateInput.value = endDate.toISOString().slice(0, 10);
+
+  const diffInMilliseconds = endDate.getTime() - startDate.getTime();
+  const diffInDays = diffInMilliseconds / (1000 * 60 * 60 * 24);
+
+  const resultElement = document.getElementById("result");
+  resultElement.innerText = `설치 기간 : ${diffInDays} `;
+});
+
+const csvInput = document.getElementById('csv-file');
+
+csvInput.addEventListener('change', () => {
+  // Clear capacity input field
+  capacityElement.value = '';
+});
+
+function calculatePower() {
+  const capacity = capacityElement.value;
+  const area = (capacity * 5.4).toFixed(2);
+  areaElement.innerText = parseFloat(area).toLocaleString();
+
   const efficiency = efficiencyElement.value;
   const insolation = insolationElement.value;
   const performanceRatio = performanceRatioElement.value;
-  const powerOutput = area * efficiency * insolation * performanceRatio;
+  const slopeIrradiationRatio = slopeIrradiationRatioElement.value;
+  const powerOutput = area * efficiency * insolation * performanceRatio * slopeIrradiationRatio;
 
   // Update power output element with the calculated value
-  powerOutputElement.innerHTML = powerOutput.toFixed(2) + ' W';
+  const formattedPowerOutput = parseFloat(powerOutput).toLocaleString('en-US');
+  powerOutputElement.innerHTML = `${formattedPowerOutput} kW`;
 
   // Remove all previous child elements from power-output-container
   const powerOutputContainer = document.getElementById('power-output-container');
@@ -440,15 +493,56 @@ function calculatePower() {
 
   // Store the calculated power output value in a new container element
   const newPowerOutput = document.createElement('p');
-  newPowerOutput.innerText = `Power output: ${powerOutput.toFixed(2)} W`;
+  const formattedPowerOutputKWh = parseFloat(powerOutput / 1000).toFixed(2).toLocaleString('en-US');
+  newPowerOutput.innerText = `Power output: ${formattedPowerOutputKWh} MWh`;
   powerOutputContainer.appendChild(newPowerOutput);
+}
+
+  const copyButton = document.getElementById('Copy Generation');
+  const powerOutput = document.getElementById('power-output');
+  
+  copyButton.addEventListener('click', () => {
+    var copy = powerOutput.innerText;
+    navigator.clipboard.writeText(copy)
+      .then(() => {
+        console.log('Copied to clipboard:', copy);
+        alert('태양광 발전량 값 복사했습니다.'  + copy);
+      })
+      .catch(err => {
+        console.error('Failed to copy text: ', err);
+        alert('에러. ' + copy);
+      });
+  });
+
+
+
+calculateButton.addEventListener('click', calculatePower);
+
+function updateCostsBasedOnCapacity() {
+  const facilityCapacity = document.getElementById('facility-capacity').value;
+  const installationCost = facilityCapacity * 1300000;
+  const omCost = facilityCapacity * 20000;
+  const inverterReplacementCost = facilityCapacity * 100000;
+
+  document.getElementById('installation-cost').value = installationCost;
+  document.getElementById('om-cost').value = omCost;
+  document.getElementById('inverter-replacement-cost').value = inverterReplacementCost;
 }
 
 
 
 function calculateCashFlow1(scenario, years, solarPowerGenerationValues, installationCost, farmlandPrice, omCost, inverterReplacementCost, electricitySalesPrice, panelEfficiencyReduction, inflation, discountRate) {
+  const sellFarmland = document.getElementById('sell-farmland').value === 'sell';
+  const npvValues = [];
+  const bcValues = []; 
+  const breakEvenPoints = [];
+
+
   solarPowerGenerationValues.forEach((solarPowerGeneration, index) => {
     const cashFlows = [];
+    let totalBenefits = 0;
+    let totalCosts = 0;
+    let cumulativeCashFlows = 0;
 
     for (let year = 0; year <= years; year++) {
       let cashFlow = 0;
@@ -461,10 +555,10 @@ function calculateCashFlow1(scenario, years, solarPowerGenerationValues, install
 
       // OM cost and inverter replacement cost
       if (year > 0) {
-        cashFlow -= omCost * Math.pow(1 + inflation / 100, year - 1);
+        cashFlow -= omCost * Math.pow(1 + inflation, year - 1);
 
         if (year % 7 === 0) {
-          cashFlow -= inverterReplacementCost * Math.pow(1 + inflation / 100, year - 1);
+          cashFlow -= inverterReplacementCost * Math.pow(1 + inflation, year - 1);
         }
       }
 
@@ -475,17 +569,91 @@ function calculateCashFlow1(scenario, years, solarPowerGenerationValues, install
         cashFlow += adjustedGeneration * electricitySalesPrice * Math.pow(1 + inflation, year - 1);
       }
 
-      // Calculate present value
-      const presentValue = cashFlow / Math.pow(1 + discountRate / 100, year);
-      cashFlows.push(presentValue);
+      // Farmland sale in the last year
+      if (year === years) {
+      if (sellFarmland) {
+      const adjustedSaleValue = farmlandPrice * Math.pow(1 + inflation, year - 1);
+      cashFlow += adjustedSaleValue;
+      }
+
+      
+}
+  // Calculate the present value of cash flows and add it to the array
+      cashFlows.push(cashFlow);
+      cumulativeCashFlows += cashFlow;
+
+      if (!breakEvenPoints[index] && cumulativeCashFlows >= 0) {
+        breakEvenPoints[index] = year;
+      }
+      
+      if (cashFlow > 0) {
+        totalBenefits += cashFlow / Math.pow(1 + discountRate, year);
+      } else {
+        totalCosts -= cashFlow / Math.pow(1 + discountRate, year);
+      }
     }
 
+    // Calculate the BC ratio
+    const bcRatio = totalBenefits / totalCosts;
+    bcValues.push(bcRatio);
+
     console.log("Cash flow for scenario " + scenario + " - Solar Power Generation " + (index + 1) + ": ", cashFlows);
+    const npv = cashFlows.reduce((acc, curr, i) => {
+      return acc + curr / Math.pow(1 + discountRate, i); // Apply the discount rate here
+    }, 0);
+
+    npvValues.push(npv);
+    
+    // Display the NPV value
+    const npvResult = document.getElementById('npv-result-' + (index + 1));
+    npvResult.innerHTML = 'NPV는 ' + numberWithCommas(npv.toFixed(2)) + '입니다.';
+  
+    // Display the break-even point
+    const breakEvenResult = document.getElementById('break-even-result-' + (index + 1));
+    const breakEvenPoint = cashFlows.findIndex(value => value >= 0);
+    if (breakEvenPoint !== -1) {
+      breakEvenResult.innerHTML = 'Break-even point는 ' + numberWithCommas(breakEvenPoint) + '년 입니다.';
+    } else {
+      breakEvenResult.innerHTML = 'Break-even point가 없습니다.';
+    }
 
     // Create an array of years for the chart labels
     const yearsArray = Array.from({ length: years + 1 }, (_, i) => i);
+
+    // Reset the canvas before creating a new chart
+    resetCanvas('cash-flow-chart-' + (index + 1));
+
     createChart('cash-flow-chart-' + (index + 1), yearsArray, cashFlows, index + 1, solarPowerGeneration);
+
   });
+}
+const npvResults = {
+  'RCP2.6': document.getElementById('npv-result-1').textContent,
+  'RCP4.5': document.getElementById('npv-result-2').textContent,
+  'RCP6.0': document.getElementById('npv-result-3').textContent,
+  'RCP8.5': document.getElementById('npv-result-4').textContent,
+};
+
+const bcResults = {
+  'RCP2.6': document.getElementById('bc-result-1').textContent,
+  'RCP4.5': document.getElementById('bc-result-2').textContent,
+  'RCP6.0': document.getElementById('bc-result-3').textContent,
+  'RCP8.5': document.getElementById('bc-result-4').textContent,
+};
+
+console.log("Total benefits: ", totalBenefits);
+console.log("Total costs: ", totalCosts);
+
+
+function resetCanvas(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  if (canvas) {
+    canvas.parentElement.removeChild(canvas);
+  }
+
+  const newCanvas = document.createElement('canvas');
+  newCanvas.id = canvasId;
+  document.body.appendChild(newCanvas);
 }
 
 function createChart(chartId, labels, data, datasetLabel, solarPowerGeneration) {
@@ -516,3 +684,4 @@ function createChart(chartId, labels, data, datasetLabel, solarPowerGeneration) 
     }
   });
 }
+
