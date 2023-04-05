@@ -8,38 +8,25 @@
 
 .intro {
   background-image: url('https://raw.githubusercontent.com/Nahyeji/website/main/images/web.png');
-  background-size: cover;
-  background-position: center;
-  height: 500px; /* increase the height of the intro section */
-  display: flex;
-  justify-content: center;
-  align-items: flex-end; /* align the map section at the bottom of the intro section */
-  padding-bottom: 50px; /* add padding to create space between the map section and intro text */
-}
-
-.intro__type {
-  font-size: 4em; /* double the font size */
-  text-align: center;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-}
-.intro__type {
-  /* existing code */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.intro {
-  background-image: url('https://raw.githubusercontent.com/Nahyeji/website/main/images/web.png');
-  background-size: cover;
-  background-position: center;
+  background-size: 2000px 500px;
+  background-position: top center;
   height: 500px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 50px;
-  opacity: 0.7; /* set opacity to 70% */
+  opacity: 0.7;
+}
+
+.intro__type {
+  font-size: 4em;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
