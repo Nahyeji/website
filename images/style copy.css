@@ -7,7 +7,7 @@
 }
 
 .intro {
-  background-image: url('https://github.com/Nahyeji/website/blob/main/images/picture.jpg?raw=true');
+  background-image: url('https://raw.githubusercontent.com/Nahyeji/website/main/images/picture.jpg');
   background-size: cover;
   background-position: center;
   height: 800px; /* increase the height of the intro section */
@@ -31,7 +31,7 @@
   align-items: center;
 }
 .intro {
-  background-image: url('https://github.com/Nahyeji/website/blob/main/images/picture.jpg?raw=true');
+  background-image: url('https://raw.githubusercontent.com/Nahyeji/website/main/images/picture.jpg');
   background-size: cover;
   background-position: center;
   height: 800px;
