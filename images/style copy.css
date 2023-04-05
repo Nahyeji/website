@@ -10,7 +10,7 @@
   background-image: url('https://github.com/Nahyeji/website/blob/main/images/picture.jpg?raw=true');
   background-size: cover;
   background-position: center;
-  height: 500px; /* increase the height of the intro section */
+  height: 800px; /* increase the height of the intro section */
   display: flex;
   justify-content: center;
   align-items: flex-end; /* align the map section at the bottom of the intro section */
@@ -34,7 +34,7 @@
   background-image: url('https://github.com/Nahyeji/website/blob/main/images/picture.jpg?raw=true');
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -251,3 +251,4 @@ span {
   font-size: 1.2em;
   margin-right: 10px;
 }
+
