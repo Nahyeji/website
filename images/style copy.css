@@ -8,7 +8,7 @@
 
 .intro {
   background-image: url('https://raw.githubusercontent.com/Nahyeji/website/main/images/web.png');
-  background-size: 2000px * 500px;
+  background-size: cover;
   background-position: center;
   height: 500px; /* increase the height of the intro section */
   display: flex;
@@ -32,7 +32,7 @@
 }
 .intro {
   background-image: url('https://raw.githubusercontent.com/Nahyeji/website/main/images/web.png');
-  background-size: 2000px * 500px;
+  background-size: cover;
   background-position: center;
   height: 500px;
   display: flex;
