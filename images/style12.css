@@ -1,0 +1,253 @@
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  background-image: url('https://github.com/Nahyeji/website/blob/main/images/picture_6.jpg?raw=true');
+  background-size: cover;
+  background-position: center;
+  height: 800px; /* increase the height of the intro section */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* align the map section at the bottom of the intro section */
+  padding-bottom: 50px; /* add padding to create space between the map section and intro text */
+}
+
+.intro__type {
+  font-size: 4em; /* double the font size */
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+.intro__type {
+  /* existing code */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro {
+  background-image: url('https://github.com/Nahyeji/website/blob/main/images/picture_5.jpg?raw=true');
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 50px;
+}
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.map-container {
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#map img {
+  display: block;
+  margin: 0 auto;
+}
+
+#map {
+  flex-basis: 60%;
+  margin-right: 20px;
+}
+
+.region-list {
+  flex-basis: 40%;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  overflow: auto;
+  width: 800px;
+  height: 560px; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.region-list ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  list-style-type: none;
+
+
+}
+
+.region-list li {
+  width: 115px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1em; /* Reduce the font size for better readability */
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  line-height: 1.2; /* Improve line-spacing */
+  word-wrap: break-word; /* Allow text to wrap to the next line */
+  hyphens: auto; /* Enable automatic hyphenation */
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+}
+
+.region-list li:nth-child(5n + 4) {
+  flex-basis: 100%;
+}
+
+.region-list li:active {
+  background-color: #ccc;
+}
+
+.region-list li.selected {
+  background-color: #ccc;
+}
+
+
+/* Main content styles */
+
+#num-years {
+  width: calc(10% - 10px); /* subtract 10px to account for padding and borders */
+}
+
+.main {
+  margin-left: 400px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#power-output {
+  font-weight: bold;
+}
+
+#power-generation {
+  position: relative;
+}
+#Copy-Generation {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Set the height of the bars based on the cash flow values */
+[data-cash-flow] {
+  height: 0;
+}
+
+[data-cash-flow="0"] {
+  height: 10%;
+  background-color: blue;
+}
+
+[data-cash-flow^="-"] {
+  height: calc((100% / var(--max-cash-flow)) * var(--abs-cash-flow));
+  background-color: red;
+}
+
+[data-cash-flow^="+"], [data-cash-flow^="0"] {
+  height: calc((100% / var(--max-cash-flow)) * var(--abs-cash-flow));
+  background-color: green;
+}
+
+/* Add a margin between the bars */
+.cash-flow-bar + .cash-flow-bar {
+  margin-left: 5px;
+}
+
+
+.container-scenario {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span {
+  font-weight: bold;
+}
+
+.chart-wrapper {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.chart-wrapper span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
