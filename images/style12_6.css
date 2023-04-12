@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solar Energy Calculator</title> 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Nahyeji/website/images/style12_5.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  
+</head>    
+    <body>
+      <section class="intro">
+        <div class="intro__type">
+          <div><span aria-hidden="true"></class="underscore"></span></div>
+        </div>
+        </div>
+        <div class="intro__tilt"></div>
+        <div class="intro__tilt--flip"></div>
+      </section>  
+          
+      <div class="container">
+          </div>
+          <div id="map-container" class="map-container">
+      <section id="map">
+  <h2></h2>
+  <div class="map-container">
+    <img id="myImage" src="https://raw.githubusercontent.com/Nahyeji/website/main/images/map.png" usemap="#myMap">
+    <map name="myMap">
+    </map>
+  </div>
+
+      </div>
+      
+      <div class="region-list">
+        <ul class="region-list">
+          <li>전주시</li>
+          <li>군산시</li>
+          <li>익산시</li>
+          <li>정읍</li>
+          <li>남원</li>
+          <li>김제시</li>
+          <li>완주군</li>
+          <li>진안군</li>
+          <li>무주군</li>
+          <li>장수군</li>
+          <li>임실군</li>
+          <li>순창군</li>
+          <li>고창군</li>
+          <li>부안군</li>
+          <li>목포시</li>
+          <li>여수시</li>
+          <li>순천시</li>
+          <li>나주시</li>
+          <li>광양시</li>
+          <li>담양군</li>
+          <li>곡성군</li>
+          <li>구례군</li>
+          <li>고흥군</li>
+          <li>보성군</li>
+          <li>화순군</li>
+          <li>장흥군</li>
+          <li>강진군</li>
+          <li>해남군</li>
+          <li>영암군</li>
+          <li>무안군</li>
+          <li>함평군</li>
+          <li>영광군</li>
+          <li>장성군</li>
+          <li>완도군</li>
+          <li>진도군</li>
+          <li>신안군</li>
+          <li>춘천시</li>
+          <li>원주시</li>
+          <li>강릉시</li>
+          <li>동해시</li>
+          <li>태백시</li>
+          <li>속초시</li>
+          <li>삼척시</li>
+          <li>홍천시</li>
+          <li>횡성군</li>
+          <li>영월군</li>
+          <li>평창군</li>
+          <li>정선군</li>
+          <li>철원군</li>
+          <li>화천군</li>
+          <li>양구군</li>
+          <li>인제군</li>
+          <li>고성군</li>
+          <li>양양군</li>
+          <li>수원시</li>
+          <li>성남시</li>
+          <li>의정부시</li>
+          <li>안양시</li>
+          <li>부천시</li>
+          <li>광명시</li>
+          <li>평택시</li>
+          <li>동두천시</li>
+          <li>안산시</li>
+          <li>고양시</li>
+          <li>과천시</li>
+          <li>구리시</li>
+          <li>남양주시</li>
+          <li>오산시</li>
+          <li>시흥시</li>
+          <li>군포시</li>
+          <li>의왕시</li>
+          <li>하남시</li>
+          <li>용인시</li>
+          <li>파주시</li>
+          <li>이천시</li>
+          <li>안성시</li>
+          <li>김포시</li>
+          <li>화성시</li>
+          <li>광주시</li>
+          <li>양주시</li>
+          <li>포천시</li>
+          <li>여주시</li>
+          <li>연천군</li>
+          <li>가평군</li>
+          <li>양평군</li>
+          <li>진주시</li>
+          <li>통영시</li>
+          <li>사천시</li>
+          <li>김해시</li>
+          <li>밀양시</li>
+          <li>거제시</li>
+          <li>양산시</li>
+          <li>창원시</li>
+          <li>의령군</li>
+          <li>함안군</li>
+          <li>창녕군</li>
+          <li>고성군</li>
+          <li>남해군</li>
+          <li>하동군</li>
+          <li>산청군</li>
+          <li>함양군</li>
+          <li>거창군</li>
+          <li>합천군</li>
+          <li>포항시</li>
+          <li>경주시</li>
+          <li>김천시</li>
+          <li>안동시</li>
+          <li>구미시</li>
+          <li>영주시</li>
+          <li>영천시</li>
+          <li>상주시</li>
+          <li>문경시</li>
+          <li>경산시</li>
+          <li>군위군</li>
+          <li>의성군</li>
+          <li>청송군</li>
+          <li>영양군</li>
+          <li>영덕군</li>
+          <li>청도군</li>
+          <li>고령군</li>
+          <li>성주군</li>
+          <li>칠곡군</li>
+          <li>예천군</li>
+          <li>봉화군</li>
+          <li>울진군</li>
+          <li>울릉군</li>
+          <li>동구</li>
+          <li>서구</li>
+          <li>남구</li>
+          <li>북구</li>
+          <li>광산구</li> 
+          <li>중구</li>
+          <li>동구</li>
+          <li>서구</li>
+          <li>남구</li>
+          <li>북구</li>
+          <li>수성구</li>
+          <li>달서구</li>
+          <li>달성군</li>
+          <li>동구</li>
+          <li>중구</li>
+          <li>서구</li>
+          <li>유성구</li>
+          <li>대덕구</li>
+          <li>중구</li>
+          <li>서구</li>
+          <li>동구</li>
+          <li>영도구</li>
+          <li>부산진구</li>
+          <li>동래구</li>
+          <li>남구</li>
+          <li>북구</li>
+          <li>해운대구</li>
+          <li>사하구</li>
+          <li>금정구</li>
+          <li>강서구</li>
+          <li>연제구</li>
+          <li>수영구</li>
+          <li>사상구</li>
+          <li>기장군</li>
+          <li>종로구</li>
+          <li>중구</li>
+          <li>용산구</li>
+          <li>성동구</li>
+          <li>광진구</li>
+          <li>동대문구</li>
+          <li>중랑구</li>
+          <li>성북구</li>
+          <li>강북구</li>
+          <li>도봉구</li>
+          <li>노원구</li>
+          <li>은평구</li>
+          <li>서대문구</li>
+          <li>마포구</li>
+          <li>양천구</li>
+          <li>강서구</li>
+          <li>구로구</li>
+          <li>금천구</li>
+          <li>영등포구</li>
+          <li>동작구</li>
+          <li>관악구</li>
+          <li>서초구</li>
+          <li>강남구</li>
+          <li>송파구</li>
+          <li>강동구</li>
+          <li>중구</li>
+          <li>남구</li>
+          <li>동구</li>
+          <li>북구</li>
+          <li>울주군</li>
+          <li>중구</li>
+          <li>동구</li>
+          <li>미추홀구</li>
+          <li>연수구</li>
+          <li>남동구</li>
+          <li>부평구</li>
+          <li>계양구</li>
+          <li>서구</li>
+          <li>강화군</li>
+          <li>옹진군</li>
+          <li>제주시</li>
+          <li>서귀포시</li>
+          <li>천안시</li>
+          <li>공주시</li>
+          <li>보령시</li>
+          <li>아산시</li>
+          <li>서산시</li>
+          <li>논산시</li>
+          <li>계룡시</li>
+          <li>당진시</li>
+          <li>금산군</li>
+          <li>영동군</li>
+          <li>부여군</li>
+          <li>서천군</li>
+          <li>청양군</li>
+          <li>홍성군</li>
+          <li>예산군</li>
+          <li>태안군</li>
+          <li>청주시</li>
+          <li>충주시</li>
+          <li>제천시</li>
+          <li>청원군</li>
+          <li>보은군</li>
+          <li>옥천군</li>
+          <li>영동군</li>
+          <li>진천군</li>
+          <li>괴산군</li>
+          <li>음성군</li>
+          <li>단양군</li>
+          <li>증평군</li>
+        </ul>
+      </div>
+
+</select>
+          <div class="city-container">
+            <label for="csv-file">RCP 시나리오 및 지역별 일사량:</label>
+            <select id="csv-file">
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EC%A0%84%EB%B6%81.csv">RCP2.6 전북</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EC%A0%84%EB%B6%81.csv">RCP4.5 전북</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EC%A0%84%EB%B6%81.csv">RCP6.0 전북</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EC%A0%84%EB%B6%81.csv">RCP8.5 전북</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EC%A0%84%EB%82%A8.csv">RCP2.6 전남</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EC%A0%84%EB%82%A8.csv">RCP4.5 전남</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EC%A0%84%EB%82%A8.csv">RCP6.0 전남</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EC%A0%84%EB%82%A8.csv">RCP8.5 전남</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EA%B0%95%EC%9B%90%EB%8F%84.csv">RCP2.6 강원도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EA%B0%95%EC%9B%90%EB%8F%84.csv">RCP4.5 강원도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EA%B0%95%EC%9B%90%EB%8F%84.csv">RCP6.0 강원도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EA%B0%95%EC%9B%90%EB%8F%84.csv">RCP8.5 강원도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EA%B2%BD%EA%B8%B0%EB%8F%84.csv">RCP2.6 경기도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EA%B2%BD%EA%B8%B0%EB%8F%84.csv">RCP4.5 경기도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EA%B2%BD%EA%B8%B0%EB%8F%84.csv">RCP6.0 경기도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EA%B2%BD%EA%B8%B0%EB%8F%84.csv">RCP8.5 경기도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84.csv">RCP2.6 경상남도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84.csv">RCP4.5 경상남도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84.csv">RCP6.0 경상남도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84.csv">RCP8.5 경상남도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84.csv">RCP2.6 경상북도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84.csv">RCP4.5 경상북도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84.csv">RCP6.0 경상북도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84.csv">RCP8.5 경상북도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP2.6 광주광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP4.5 광주광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP6.0 광주광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP8.5 광주광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP2.6 대구광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP4.5 대구광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP6.0 대구광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP8.5 대구광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP2.6 대전광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP4.5 대전광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP6.0 대전광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP8.5 대전광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP2.6 부산광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP4.5 부산광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP6.0 부산광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP8.5 부산광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C.csv">RCP2.6 서울특별시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C.csv">RCP4.5 서울특별시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C.csv">RCP6.0 서울특별시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C.csv">RCP8.5 서울특별시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP2.6 울산광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP4.5 울산광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP6.0 울산광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP8.5 울산광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP2.6 인천광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP4.5 인천광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP6.0 인천광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C.csv">RCP8.5 인천광역시</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EC%A0%9C%EC%A3%BC%EB%8F%84.csv">RCP2.6 제주도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EC%A0%9C%EC%A3%BC%EB%8F%84.csv">RCP4.5 제주도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EC%A0%9C%EC%A3%BC%EB%8F%84.csv">RCP6.0 제주도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EC%A0%9C%EC%A3%BC%EB%8F%84.csv">RCP8.5 제주도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84.csv">RCP2.6 충청남도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84.csv">RCP4.5 충청남도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84.csv">RCP6.0 충청남도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84.csv">RCP8.5 충청남도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP2.6%20%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84.csv">RCP2.6 충청북도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP4.5%20%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84.csv">RCP4.5 충청북도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP6.0%20%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84.csv">RCP6.0 충청북도</option>
+              <option value="https://raw.githubusercontent.com/Nahyeji/website/main/RCP8.5%20%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84.csv">RCP8.5 충청북도</option>
+            </select>
+            <br><br>     
+    <br><br>
+    <label for="start-date">태양광 발전 시작일:</label>
+    <input type="date" id="start-date" name="start-date">
+    <br><br>
+    <label for="num-years">태양광 설치 기간:</label>
+    <input type="number" id="num-years" name="num-years" min="1">
+    <br><br>
+    <button id="calculate-date">날짜 계산</button>
+    <br><br>
+    <label for="end-date">태양광 사업 종료일:</label>
+    <input type="date" id="end-date" name="end-date">
+    <br><br>
+    <button id="calculate">발전량 계산</button>
+    <br><br>
+    <div id="result"></div>
+    </body>  
+    </section>
+
+
+    <section id="power-generation">
+    <table>
+      <thead>
+        <tr>
+          <th>요소</th>
+          <th>값</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>태양광 시설용량 (kW)</td>
+          <td><input type="number" id="capacity" value="" oninput="calculatePower()"></td>
+        </tr>
+        <tr>
+          <td>변환된 태양광 면적 (m<sup>2</sup>)</td>
+          <td><span id="area">0</span></td>
+        </tr>
+        <tr>
+          <td>태양광 패널 효율(%)</td>
+          <td><input type="number" id="efficiency" value="21.4" oninput="calculatePower()"></td>
+        </tr>
+        <tr>
+          <td>일사량(kWh/m^2)</td>
+          <td><input type="number" id="insolation" value="4.5" oninput="calculatePower()"></td>
+        </tr>
+        <tr>
+          <td>태양광 기계적 손실 비율(%)</td>
+          <td><input type="number" id="performance-ratio" value="75" oninput="calculatePower()"></td>
+        </tr>
+        <tr>
+          <td>경사면 일사량 비율</td>
+          <td><input type="number" id="slope-irradiation-ratio" value="1.21" oninput="calculatePower()"></td>
+        </tr>
+        <tr>
+          <td>발전량(kWh)</td>
+          <td><span id="power-output">0.00 kWh</span></td>
+        </tr>
+      <br><br>
+      <button id="refresh">전체 값 초기화</button>
+      <br><br>
+    </tbody>
+    </table>
+  </section>
+<body>
+
+  <div class="container-scenario">
+  <section id="Comparison-by-NPV-scenario">
+    <h2>RCP별 경제성 분석(NPV,BC)</h2>
+    <form id="cash-flow-form1">
+      <label for="태양광 발전량2.6">태양광 발전량(RCP2.6):</label>
+      <input type="number" id="태양광 발전량2.6" name="태양광 발전량2.6" value="" step="any">
+      <label for="태양광 발전량">태양광 발전량(RCP4.5):</label>
+      <input type="number" id="태양광 발전량4.5" name="태양광 발전량4.5" value="">
+      <label for="태양광 발전량4.5">태양광 발전량(RCP6.0):</label>
+      <input type="number" id="태양광 발전량6.0" name="태양광 발전량6.0" value="">
+      <label for="태양광 발전량">태양광 발전량(RCP8.5):</label>
+      <input type="number" id="태양광 발전량8.5" name="태양광 발전량8.5" value="">
+      <label for="facility-capacity">태양광 시설용량(kW):</label>
+      <input type="number" id="facility-capacity" oninput="updateCostsBasedOnCapacity()">
+      <label for="installation-cost">태양광 설치 비용 (단위: 원):</label>
+      <input type="number" id="installation-cost" name="installation-cost" value="1500000">
+      <label for="farmland-Price">태양광 설치 부지 가격 (단위: 원):</label>
+      <input type="number" id="farmland-price" name="farmland-price" value="500000">
+      <div>
+        <label for="sell-farmland">태양광 발전 사업 후 사업 부지 매각 여부:</label>
+        <select id="sell-farmland" name="sell-farmland">(잔존가치 비용 고려)
+          <option value="sell">부지 매각 한다</option>
+          <option value="no-sell" selected>부지 매각 안 한다</option>
+        </select>
+      </div>
+
+      <label for="om-cost">OM Cost(발전소 운영 및 유지관리비용)</label>
+      <br> (단위: 원):</label>
+      <input type="number" id="om-cost" name="om-cost" value="20400">
+      <label for="inverter-replacement-cost">인버터 교체 비용 (단위: 원):</label>
+      <input type="number" id="inverter-replacement-cost" name="inverter-replacement-cost" value="150000">
+      <label for="electricity-sales-price">전기판매 가격(SMP+REC) (단위: 원):</label>
+      <input type="number" id="electricity-sales-price" name="electricity-sales-price" value="200">
+      <label for="panel-efficiency-reduction">태양광 패널 감소 효율(%)</label>
+      <br>(0.54값 Qcells 태양광모듈datasheet 참고):</label>
+      <input type="number" id="panel-efficiency-reduction" 
+      name="panel-efficiency-reduction" value="0.54">
+      <label for="inflation">인플레이션(%):</label>
+      <input type="number" id="inflation" name="inflation" value="4.6">
+      <label for="discount-rate">할인율(미래 현금 가치를 현재 가치로 변환하는 것을 뜻함):</label>
+      <input type="number" id="discount-rate" name="discount-rate" value="10">
+      <label for="project-duration">태양광 발전 사업기간 (년도):</label>
+      <input type="number" id="project-duration" name="project-duration" value="">
+      
+      <button type="button" onclick="calculateCashFlow1('RCP2.6', parseInt(document.getElementById('project-duration').value), [
+      parseFloat(document.getElementById('태양광 발전량2.6').value),
+      parseFloat(document.getElementById('태양광 발전량4.5').value),
+      parseFloat(document.getElementById('태양광 발전량6.0').value),
+      parseFloat(document.getElementById('태양광 발전량8.5').value),
+    ], parseFloat(document.getElementById('installation-cost').value), parseFloat(document.getElementById('farmland-price').value), parseFloat(document.getElementById('om-cost').value), parseFloat(document.getElementById('inverter-replacement-cost').value), parseFloat(document.getElementById('electricity-sales-price').value), parseFloat(document.getElementById('panel-efficiency-reduction').value) / 100, parseFloat(document.getElementById('inflation').value ) / 100, parseFloat(document.getElementById('discount-rate').value) / 100)" style="width: 50%; height: 50px; font-weight: bold; margin-top: 10%;">NPV, BC 계산하기</button>
+
+    </form>
+
+    <div id="charts-area" class="charts-container">
+      <div class="chart-wrapper">
+        <canvas class="cash-flow-chart" id="cash-flow-chart-1" width="621" height="310"></canvas>
+        <span>
+          RCP2.6<p id="npv-result-1"> </p>
+          <p id="bc-result-1"> </p>
+          <p id="break-even-result-1"> </p>
+        </span>
+      </div>
+      
+      <div class="chart-wrapper">
+        <canvas class="cash-flow-chart" id="cash-flow-chart-2" width="621" height="310"></canvas>
+        <span>
+          RCP4.5 <p id="npv-result-2"></p>
+            <p id="bc-result-2"></p>
+            <p id="break-even-result-2"> </p>
+        </span>
+      </div>
+      
+      <div class="chart-wrapper">
+        <canvas class="cash-flow-chart" id="cash-flow-chart-3" width="621" height="310"></canvas>
+        <span>
+          RCP6.0 <p id="npv-result-3"></p>
+            <p id="bc-result-3"></p>
+            <p id="break-even-result-3"> </p>
+        </span>
+      </div>
+      
+      <div class="chart-wrapper">
+        <canvas class="cash-flow-chart" id="cash-flow-chart-4" width="621" height="310"></canvas>
+        <span>
+          RCP8.5 <p id="npv-result-4"></p>
+            <p id="bc-result-4"></p>
+            <p id="break-even-result-4"> </p>
+        </span>
+      </div>
+    </div>
+
+
+  <script>
+    function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+
+    // Define variables for DOM elements
+const cityElement = document.getElementById('city');
+const startDateElement = document.getElementById('start-date');
+const endDateElement = document.getElementById('end-date');
+const calculateButton = document.getElementById('calculate');
+const resultElement = document.getElementById('result');
+const areaElement = document.getElementById('area');
+const efficiencyElement = document.getElementById('efficiency');
+const insolationElement = document.getElementById('insolation');
+const performanceRatioElement = document.getElementById('performance-ratio');
+const powerOutputElement = document.getElementById('power-output');
+const capacityElement = document.getElementById('capacity');
+const slopeIrradiationRatioElement = document.getElementById('slope-irradiation-ratio');
+
+// Add event listeners to elements
+calculateButton.addEventListener('click', calculateSum);
+areaElement.addEventListener('input', calculatePower);
+efficiencyElement.addEventListener('input', calculatePower);
+insolationElement.addEventListener('input', calculatePower);
+performanceRatioElement.addEventListener('input', calculatePower);
+
+// Define variables for DOM elements
+const citySelect = document.getElementById('city');
+const regionItems = document.querySelectorAll('.region-list li');
+
+// Function to change the value of the city select element
+function changeCity(city) {
+  citySelect.value = city;
+}
+
+
+// Get the image element
+const image = document.getElementById("myImage");
+
+
+
+// Add a click event listener to the image element
+image.addEventListener("click", function(event) {
+  // Get the x and y coordinates of the click event
+  const x = event.offsetX;
+  const y = event.offsetY;
+
+  // Check if the click event is in the first region
+  if (x >= 144 && x <= 221 && y >= 245 && y <= 303) {
+    // Change the image source to map1.png
+    image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map1.png";
+
+    // Get the region list element
+    const regionList = document.querySelector(".region-list ul");
+
+    // Clear the current list of regions
+    regionList.innerHTML = "";
+
+    // Create a new list of regions based on the new map image
+    const regions = ["전주시", "군산시", "익산시", "정읍시", "남원시", "김제시", "완주군", "진안군", "무주군", "장수군", "임실군", "순창군", "고창군", "부안군"];
+    regions.forEach(function(region) {
+      const li = document.createElement("li");
+      li.textContent = region;
+      regionList.appendChild(li);
+    });
+  }
+  // Check if the click event is in the second region
+  else if (x >= 127 && x <= 225 && y >= 333 && y <= 397) {
+    // Change the image source to map2.png
+    image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map2.png";
+
+    // Get the region list element
+    const regionList = document.querySelector(".region-list ul");
+
+    // Clear the current list of regions
+    regionList.innerHTML = "";
+
+    // Create a new list of regions based on the new map image
+    const regions = ["목포시", "여수시", "순천시", "나주시", "광양시", "담양군", "곡성군", "구례군", "고흥군", "보성군", "화순군", "장흥군", "강진군", "해남군", "영암군", "무안군", "함평군", "영광군", "장성군", "완도군", "진도군", "신안군"];
+    regions.forEach(function(region) {
+      const li = document.createElement("li");
+      li.textContent = region;
+      regionList.appendChild(li);
+    });
+  }
+
+  // Check if the click event is in the second region
+  else if (x >= 226 && x <= 342 && y >= 27 && y <= 125) {
+    // Change the image source to map3.png
+    image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map3.png";
+
+    // Get the region list element
+    const regionList = document.querySelector(".region-list ul");
+
+    // Clear the current list of regions
+    regionList.innerHTML = "";
+
+    // Create a new list of regions based on the new map image
+    const regions = ["춘천시", "원주시", "강릉시", "동해시", "태백시", "속초시", "삼척시", "홍천군", "횡성군", "영월군", "평창군", "정선군"];
+    regions.forEach(function(region) {
+      const li = document.createElement("li");
+      li.textContent = region;
+      regionList.appendChild(li);
+    });
+  }
+
+  
+
+  // Check if the click event is in the second region
+  else if (x >= 187 && x <= 232 && y >= 41 && y <= 155) {
+    // Change the image source to map4.png
+    image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map4.png";
+
+    // Get the region list element
+    const regionList = document.querySelector(".region-list ul");
+
+    // Clear the current list of regions
+    regionList.innerHTML = "";
+
+    // Create a new list of regions based on the new map image
+    const regions = ["수원시", "성남시", "의정부시", "안양시", "부천시", "광명시", "평택시", "동두천시", "안산시", "고양시", "과천시", "구리시", "남양주시", "오산시", "시흥시", "군포시", "의왕시", "하남시", "용인시", "파주시", "이천시", "안성시", "김포시", "화성시", "광주시", "양주시", "포천시", "여주시", "연천군", "가평군", "양평군"];
+    regions.forEach(function(region) {
+      const li = document.createElement("li");
+      li.textContent = region;
+      regionList.appendChild(li);
+    });
+  }
+
+  // Check if the click event is in the second region
+  else if (x >= 235 && x <= 308 && y >= 282 && y <= 344) {
+    // Change the image source to map5.png
+    image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map5.png";
+
+    // Get the region list element
+    const regionList = document.querySelector(".region-list ul");
+
+    // Clear the current list of regions
+    regionList.innerHTML = "";
+
+    // Create a new list of regions based on the new map image
+    const regions = ["진주시", "통영시", "사천시", "김해시", "밀양시", "거제시", "양산시", "창원시", "의령군", "함안군", "창녕군", "고성군", "남해군", "하동군", "산청군", "함양군", "거창군", "합천군"];
+    regions.forEach(function(region) {
+      const li = document.createElement("li");
+      li.textContent = region;
+      regionList.appendChild(li);
+    });
+  }
+
+  // Check if the click event is in the second region
+  else if (x >= 289 && x <= 359 && y >= 145 && y <= 244) {
+    // Change the image source to map6.png
+    image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map6.png";
+
+    // Get the region list element
+    const regionList = document.querySelector(".region-list ul");
+
+    // Clear the current list of regions
+    regionList.innerHTML = "";
+
+    // Create a new list of regions based on the new map image
+    const regions = ["포항시", "경주시", "김천시", "안동시", "구미시", "영주시", "영천시", "상주시", "문경시", "경산시", "군위군", "의성군", "청송군", "영양군", "영덕군", "청도군", "고령군", "성주군", "칠곡군", "예천군", "봉화군", "울진군", "울릉군"];
+    regions.forEach(function(region) {
+      const li = document.createElement("li");
+      li.textContent = region;
+      regionList.appendChild(li);
+    });
+  }
+
+ // Check if the click event is in the second region
+  else if (x >= 151 && x <= 176 && y >= 317 && y <= 334) {
+  // Change the image source to map7.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map7.png";
+
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+
+  // Create a new list of regions based on the new map image
+  const regions = ["동구", "서구", "남구", "북구", "광산구"];
+  regions.forEach(function(region) {
+    const li = document.createElement("li");
+    li.textContent = region;
+    regionList.appendChild(li);
+  });
+}
+
+ // Check if the click event is in the second region
+  else if (x >= 281 && x <= 302 && y >= 247 && y <= 278) {
+  // Change the image source to map8.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map8.png";
+
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+
+  // Create a new list of regions based on the new map image
+  const regions = ["중구", "동구", "서구", "남구", "북구", "수성구", "달서구", "달성군"];
+  regions.forEach(function(region) {
+    const li = document.createElement("li");
+    li.textContent = region;
+    regionList.appendChild(li);
+  });
+}
+
+ // Check if the click event is in the second region
+  else if (x >= 195 && x <= 205 && y >= 215 && y <= 225) {
+  // Change the image source to map9.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map9.png";
+
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+
+  // Create a new list of regions based on the new map image
+  const regions = ["동구", "중구", "서구", "유성구", "대덕구"];
+  regions.forEach(function(region) {
+    const li = document.createElement("li");
+    li.textContent = region;
+    regionList.appendChild(li);
+  });
+}
+
+ // Check if the click event is in the second region
+  else if (x >= 316 && x <= 348 && y >= 305 && y <= 333) {
+  // Change the image source to map10.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map10.png";
+
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+
+  // Create a new list of regions based on the new map image
+  const regions = ["중구", "서구", "동구", "영도구", "부산진구", "동래구", "남구", "북구", "해운대구", "사하구", "금정구", "강서구", "연제구", "수영구"];
+  regions.forEach(function(region) {
+    const li = document.createElement("li");
+    li.textContent = region;
+    regionList.appendChild(li);
+  });
+}
+
+ // Check if the click event is in the second region
+  else if (x >= 166 && x <= 187 && y >= 90 && y <= 113) {
+  // Change the image source to map11.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map11.png";
+
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+
+  // Create a new list of regions based on the new map image
+  const regions = ["종로구", "중구", "용산구", "성동구", "광진구", "동대문구", "중랑구", "성북구", "강북구", "도봉구", "노원구", "은평구", "서대문구", "마포구", "양천구", "강서구", "구로구", "금천구", "영등포구", "동작구", "관악구", "서초구", "강남구", "송파구", "강동구"];
+  regions.forEach(function(region) {
+    const li = document.createElement("li");
+    li.textContent = region;
+    regionList.appendChild(li);
+  });
+}
+
+ // Check if the click event is in the second region
+  else if (x >= 330 && x <= 358 && y >= 273 && y <= 301) {
+  // Change the image source to map12.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map12.png";
+
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+
+  // Create a new list of regions based on the new map image
+  const regions = ["중구", "남구", "동구", "북구", "울주군"];
+  regions.forEach(function(region) {
+    const li = document.createElement("li");
+    li.textContent = region;
+    regionList.appendChild(li);
+  });
+}
+ // Check if the click event is in the second region
+  else if (x >= 131 && x <= 156 && y >= 88 && y <= 115) {
+  // Change the image source to map13.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map13.png";
+
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+
+  // Create a new list of regions based on the new map image
+  const regions = ["중구", "동구", "미추홀구", "연수구", "남동구", "부평구", "계양구", "서구", "강화군", "옹진군"];
+  regions.forEach(function(region) {
+    const li = document.createElement("li");
+    li.textContent = region;
+    regionList.appendChild(li);
+  });
+}
+ // Check if the click event is in the second region
+  else if (x >= 106 && x <= 175 && y >= 467 && y <= 513) {
+  // Change the image source to map14.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map14.png";
+
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+
+  // Create a new list of regions based on the new map image
+  const regions = ["제주시","서귀포시"];
+  regions.forEach(function(region) {
+    const li = document.createElement("li");
+    li.textContent = region;
+    regionList.appendChild(li);
+  });
+}
+ // Check if the click event is in the second region
+  else if (x >= 122 && x <= 189 && y >= 155 && y <= 233) {
+  // Change the image source to map15.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map15.png";
+
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+
+  // Create a new list of regions based on the new map image
+  const regions = ["천안시", "공주시", "보령시", "아산시", "서산시", "논산시", "계룡시", "당진시", "금산군", "영암군", "부여군", "서천군", "청양군", "홍성군", "예산군", "태안군"];
+  regions.forEach(function(region) {
+    const li = document.createElement("li");
+    li.textContent = region;
+    regionList.appendChild(li);
+  });
+}
+
+// Check if the click event is in the second region
+else if (x >= 212 && x <= 252 && y >= 145 && y <= 221) {
+  // Change the image source to map16.png
+  image.src = "https://raw.githubusercontent.com/Nahyeji/website/main/images/map16.png";
+  
+  // Get the region list element
+  const regionList = document.querySelector(".region-list ul");
+  
+  // Clear the current list of regions
+  regionList.innerHTML = "";
+  
+  // Create a new list of regions based on the new map image
+  const regions = ["청주시", "충주시", "제천시", "청원군", "보은군", "옥천군", "영동군", "진천군", "괴산군", "음성군", "단양군", "증평군"];
+  
+  regions.forEach(function(region) {
+  const li = document.createElement("li");
+  li.textContent = region;
+  regionList.appendChild(li);
+  });
+  }
+
+});
+
+document.querySelectorAll('.region-list li').forEach((region) => {
+  region.addEventListener('click', (event) => {
+    // Deselect the previous selected region
+    const selectedRegion = document.querySelector('.region-list li.selected');
+    if (selectedRegion) {
+      selectedRegion.classList.remove('selected');
+    }
+
+    // Select the clicked region
+    event.target.classList.add('selected');
+  });
+});
+
+
+
+
+
+function calculateSum() {
+  const regionList = document.querySelector(".region-list ul");
+  const selectedRegion = regionList.querySelector("li.selected");
+  const regionName = selectedRegion.textContent;
+  const startDate = startDateElement.value;
+  const endDate = endDateElement.value;
+  let sum = 0;
+
+  // Fetch data from CSV file using Ajax
+  fetch(document.getElementById('csv-file').value)
+    .then(response => response.text())
+    .then(data => {
+      const rows = data.split('\n');
+      const header = rows[0].split(',');
+      const columnIndex = header.indexOf(regionName);
+
+      for (let i = 1; i < rows.length; i++) {
+        const row = rows[i].split(',');
+        const date = row[0];
+        if (date >= startDate && date <= endDate) {
+          sum += Number(row[columnIndex]);
+        }
+      }
+
+      // Calculate solar insolation in W/m²
+      const insolation = (sum * 24) / 1000;
+
+      // Update insolation element value
+      insolationElement.value = insolation.toFixed(2);
+
+      // Calculate power output and store it in a variable
+      const area = areaElement.value;
+      const efficiency = efficiencyElement.value;
+      const performanceRatio = performanceRatioElement.value;
+      const powerOutputValue = area * efficiency * sum * performanceRatio
+
+      // Update power output element with the calculated value
+      powerOutputElement.innerHTML = powerOutputValue.toFixed(2) + ' kW';
+    });
+}
+
+// Add click event listener to region list
+const regionList = document.querySelector(".region-list ul");
+regionList.addEventListener("click", function(event) {
+  // Remove "selected" class from all regions
+  const regions = regionList.querySelectorAll("li");
+  regions.forEach(function(region) {
+    region.classList.remove("selected");
+  });
+  // Add "selected" class to clicked region
+  const clickedRegion = event.target;
+  clickedRegion.classList.add("selected");
+});
+
+
+const calculateDateButton = document.getElementById("calculate-date");
+calculateDateButton.addEventListener("click", () => {
+  const startDateInput = document.getElementById("start-date");
+  const endDateInput = document.getElementById("end-date");
+  const numYearsInput = document.getElementById("num-years");
+
+  const startDate = new Date(startDateInput.value);
+  const numYears = parseInt(numYearsInput.value);
+
+  if (isNaN(numYears) || numYears < 1) {
+    alert("Please enter a valid number of years.");
+    return;
+  }
+
+  const endDate = new Date(startDate);
+  endDate.setFullYear(startDate.getFullYear() + numYears);
+  endDateInput.value = endDate.toISOString().slice(0, 10);
+
+  const diffInMilliseconds = endDate.getTime() - startDate.getTime();
+  const diffInDays = diffInMilliseconds / (1000 * 60 * 60 * 24);
+
+  const resultElement = document.getElementById("result");
+  resultElement.innerText = `설치 기간 : ${diffInDays} `;
+});
+
+const csvInput = document.getElementById('csv-file');
+
+csvInput.addEventListener('change', () => {
+  // Clear capacity input field
+  capacityElement.value = '';
+});
+
+function calculatePower() {
+  const capacity = capacityElement.value;
+  const area = (capacity * 5.4).toFixed(2);
+  areaElement.innerText = parseFloat(area).toLocaleString();
+
+  const efficiency = efficiencyElement.value/100;
+  const insolation = insolationElement.value;
+  const performanceRatio = performanceRatioElement.value;
+  const slopeIrradiationRatio = slopeIrradiationRatioElement.value/100;
+  const powerOutput = area * efficiency * insolation * performanceRatio * slopeIrradiationRatio;
+
+  // Update power output element with the calculated value
+  const formattedPowerOutput = parseFloat(powerOutput).toLocaleString('en-US');
+  powerOutputElement.innerHTML = `${formattedPowerOutput} kW`;
+
+  // Remove all previous child elements from power-output-container
+  const powerOutputContainer = document.getElementById('power-output-container');
+  powerOutputContainer.innerHTML = '';
+
+  // Store the calculated power output value in a new container element
+  const newPowerOutput = document.createElement('p');
+  const formattedPowerOutputKWh = parseFloat(powerOutput / 1000).toFixed(2).toLocaleString('en-US');
+  newPowerOutput.innerText = `Power output: ${formattedPowerOutputKWh} MWh`;
+  powerOutputContainer.appendChild(newPowerOutput);
+}
+
+var refreshButton = document.getElementById('refresh');
+
+refreshButton.addEventListener('click', () => {
+  location.reload();
+});
+
+
+
+calculateButton.addEventListener('click', calculatePower);
+
+function updateCostsBasedOnCapacity() {
+  const facilityCapacity = document.getElementById('facility-capacity').value;
+  const installationCost = facilityCapacity * 1300000;
+  const omCost = facilityCapacity * 20000;
+  const inverterReplacementCost = facilityCapacity * 100000;
+
+  document.getElementById('installation-cost').value = installationCost;
+  document.getElementById('om-cost').value = omCost;
+  document.getElementById('inverter-replacement-cost').value = inverterReplacementCost;
+}
+
+
+
+function calculateCashFlow1(scenario, years, solarPowerGenerationValues, installationCost, farmlandPrice, omCost, inverterReplacementCost, electricitySalesPrice, panelEfficiencyReduction, inflation, discountRate) {
+  const sellFarmland = document.getElementById('sell-farmland').value === 'sell';
+  const npvValues = [];
+  const bcValues = []; 
+  const breakEvenPoints = [];
+
+
+  solarPowerGenerationValues.forEach((solarPowerGeneration, index) => {
+    const cashFlows = [];
+    let totalBenefits = 0;
+    let totalCosts = 0;
+    let cumulativeCashFlows = 0;
+
+    for (let year = 0; year <= years; year++) {
+      let cashFlow = 0;
+
+      // Installation cost and farmland price in year 0
+      if (year === 0) {
+        cashFlow -= installationCost;
+        cashFlow -= farmlandPrice;
+      }
+
+      // OM cost and inverter replacement cost
+      if (year > 0) {
+        cashFlow -= omCost * Math.pow(1 + inflation, year-1);
+
+        if (year % 7 === 0) {
+          cashFlow -= inverterReplacementCost * Math.pow(1 + inflation, year-1);
+        }
+      }
+
+      // Solar power generation and electricity sales price
+      if (year > 0) {
+        const annualSolarPowerGeneration = solarPowerGeneration / years;
+        const adjustedGeneration = annualSolarPowerGeneration * Math.pow(1 - panelEfficiencyReduction, year-1);
+        cashFlow += adjustedGeneration * electricitySalesPrice * Math.pow(1 + inflation, year-1);
+      }
+
+      // Farmland sale in the last year
+      if (year === years) {
+      if (sellFarmland) {
+      const adjustedSaleValue = farmlandPrice * Math.pow(1 + inflation, year-1);
+      cashFlow += adjustedSaleValue;
+      }
+
+      
+}
+// Calculate the present value of cash flows and add it to the array
+cashFlows.push(cashFlow);
+cumulativeCashFlows += cashFlow;
+
+if (!breakEvenPoints[index] && cumulativeCashFlows >= 0) {
+  const prevYear = year - 1;
+  const prevCumulativeCashFlows = cumulativeCashFlows - cashFlow;
+  const proportion = (0 - prevCumulativeCashFlows) / (cumulativeCashFlows - prevCumulativeCashFlows);
+  breakEvenPoints[index] = parseFloat((prevYear + proportion).toFixed(2));
+}
+
+if (cashFlow > 0) {
+  totalBenefits += cashFlow / Math.pow(1 + discountRate, year);
+} else {
+  totalCosts -= cashFlow / Math.pow(1 + discountRate, year);
+}
+    }
+
+    // Calculate the BC ratio
+    const bcRatio = totalBenefits / totalCosts;
+    bcValues.push(bcRatio);
+
+    console.log(" Cash flow for scenario " + scenario + " - Solar Power Generation " + (index + 1) + ": ", cashFlows);
+    const npv = cashFlows.reduce((acc, curr, i) => {
+      return acc + curr / Math.pow(1 + discountRate, i); // Apply the discount rate here
+    }, 0);
+    
+    // Display the NPV value
+    const npvResult = document.getElementById('npv-result-' + (index + 1));
+    npvResult.innerHTML = 'NPV는 ' + numberWithCommas(npv.toFixed(2)) + '원 입니다.';
+
+    npvValues.push(npv); 
+
+    // Display the BC value
+    const bcResult = document.getElementById('bc-result-' + (index + 1));
+    bcResult.innerHTML = 'BC ratio는 ' + bcRatio.toFixed(2) + '입니다.';
+
+// Display the break-even point
+const breakEvenResult = document.getElementById('break-even-result-' + (index + 1));
+if (breakEvenPoints[index]) {
+  const breakEvenPoint = breakEvenPoints[index];
+  const breakEvenYears = Math.floor(breakEvenPoint); // get the whole number part (years)
+  const breakEvenMonths = Math.round((breakEvenPoint - breakEvenYears) * 12); // convert the decimal part to months and round to the nearest month
+  breakEvenResult.innerHTML = `Break-even point는 ${breakEvenYears} 년 ${breakEvenMonths} 개월 입니다.` ;
+} else {
+  breakEvenResult.innerHTML = 'There is no break-even point.';
+}
+
+    
+
+
+    // Create an array of years for the chart labels
+    const yearsArray = Array.from({ length: years + 1 }, (_, i) => i);
+
+    // Reset the canvas before creating a new chart
+    resetCanvas('cash-flow-chart-' + (index + 1));
+
+    createChart('cash-flow-chart-' + (index + 1), yearsArray, cashFlows, index + 1, solarPowerGeneration);
+
+  });
+}
+const npvResults = {
+  'RCP2.6': document.getElementById('npv-result-1').textContent,
+  'RCP4.5': document.getElementById('npv-result-2').textContent,
+  'RCP6.0': document.getElementById('npv-result-3').textContent,
+  'RCP8.5': document.getElementById('npv-result-4').textContent,
+};
+
+const bcResults = {
+  'RCP2.6': document.getElementById('bc-result-1').textContent,
+  'RCP4.5': document.getElementById('bc-result-2').textContent,
+  'RCP6.0': document.getElementById('bc-result-3').textContent,
+  'RCP8.5': document.getElementById('bc-result-4').textContent,
+};
+
+console.log("Total benefits: ", totalBenefits);
+console.log("Total costs: ", totalCosts);
+
+
+function resetCanvas(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  if (canvas) {
+    canvas.parentElement.removeChild(canvas);
+  }
+
+  const newCanvas = document.createElement('canvas');
+  newCanvas.id = canvasId;
+  document.getElementById('charts-area').appendChild(newCanvas);
+}
+
+function createChart(chartId, labels, data, datasetLabel, solarPowerGeneration) {
+  const scenarioLabels = ['2.6', '4.5', '6.0', '8.5'];
+  const ctx = document.getElementById(chartId).getContext('2d');
+
+  const backgroundColors = data.map(value => value < 0 ? 'rgba(255, 0, 0, 0.2)' : 'rgba(0, 0, 255, 0.2)');
+  const borderColors = data.map(value => value < 0 ? 'rgba(255, 0, 0, 1)' : 'rgba(0, 0, 255, 1)');
+
+  const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Investment Cost, RCP Scenario ' + scenarioLabels[datasetLabel - 1],
+        data: data,
+        backgroundColor: backgroundColors,
+        borderColor: borderColors,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+
+  </script>
+</body>
+
+
+</html>
